@@ -38,7 +38,7 @@ app.post('/api/deliver', upload.single('image'), async (req, res) => {
       Key: key,
       Body: file.buffer,
       ContentType: file.mimetype,
-      ACL: 'public-read'
+      // ACL: 'public-read'
     }).promise();
 
     const imageUrl = `https://${process.env.S3_BUCKET}.s3.amazonaws.com/${key}`;
