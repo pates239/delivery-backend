@@ -45,7 +45,7 @@ app.post('/api/deliver', upload.single('image'), async (req, res) => {
 
     // Send MMS to customer
     await twilioClient.messages.create({
-      body: `Hi ${name}, your food has been delivered! Here's a photo.`,
+      body: `Hi ${name}, your Grain & Greens Bowl has been delivered! We hope you enjoy Your Meal! \n -Grain & Greens Team`,
       from: process.env.TWILIO_NUMBER,
       to: phone,
       mediaUrl: [imageUrl]
